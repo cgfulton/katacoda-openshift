@@ -13,12 +13,12 @@ Use the same credentials to log into the web console.
 
 ## Creating your own Project
 
-To create a new project called ``hello`` run the command:
+To create a new project called ``helloProject`` run the command:
 
-``oc new-project hello``{{execute}}
+``oc new-project helloProject``{{execute}}
 
 You could instead create the project from the web console. If you do this,
 to change to the project from the command line run the command:
 
-``oc project hello``{{execute}}
+``oc project helloProject``{{execute}}
 

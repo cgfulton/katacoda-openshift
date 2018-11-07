@@ -1,3 +1,3 @@
 ## Setup hello world
 
-``oc create -f hello.yaml``{{execute}}
+``oc create -f hello.yml``{{execute}}
