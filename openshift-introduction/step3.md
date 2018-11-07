@@ -2,12 +2,7 @@
 
 # Create application 
 
-TODO
-
 ``oc new-app hello``{{execute}}
-
-It creates deployment config
-
 
 # Expose application 
 
