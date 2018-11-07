@@ -24,7 +24,7 @@
       "client": [
         {
           "file": "hello.yml",
-          "target": "~/"
+          "target": "/root/"
         }
       ]
     }
