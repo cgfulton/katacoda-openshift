@@ -10,6 +10,7 @@
       }
     ],
     "intro": {
+      "code": "set-env.sh",
       "text": "intro.md"
     },
     "finish": {
