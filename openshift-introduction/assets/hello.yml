@@ -17,7 +17,7 @@ items:
       dockerfile: |-
         FROM centos:7
         RUN yum install -y nc
-        ENTRYPOINT bash -c "while true ; do nc -l -p 8080 -c 'echo -e \"HTTP/1.1 200 OK\n\nOK\"'; done"
+        ENTRYPOINT ["/bin/sh", "-c", "while true ; do nc -l -p 8080 -c 'echo -e \"HTTP/1.1 200 OK\n\n$(date)\"'; done"]
       type: Dockerfile
     strategy:
       type: Docker
