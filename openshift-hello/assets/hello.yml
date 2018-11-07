@@ -1,3 +1,4 @@
+# clean up labels
 apiVersion: v1
 kind: List
 items:
@@ -16,7 +17,7 @@ items:
       dockerfile: |-
         FROM centos:7
         RUN yum install -y nc
-        ENTRYPOINT bash -c "while true ; do echo 'echo -e \"HTTP/1.1 200 OK\n\n $(date)\"'; done"
+        ENTRYPOINT bash -c "while true ; do echo 'echo -e \"HTTP/1.1 200 OK\n\nOK\"'; done"
       type: Dockerfile
     strategy:
       type: Docker
