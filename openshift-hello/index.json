@@ -7,6 +7,10 @@
       {
         "title": "Introduction to Openshift",
         "text": "step1.md"
+      },
+      {
+        "title": "Setup hello world",
+        "text": "step2.md"
       }
     ],
     "intro": {
@@ -15,6 +19,14 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "client": [
+        {
+          "file": "hello.yml",
+          "target": "~/"
+        }
+      ]
     }
   },
   "environment": { 
