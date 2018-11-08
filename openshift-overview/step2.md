@@ -85,4 +85,8 @@ Push successful
 
 Above you can see build is completed and pushed to ImageStream (calculate from name - hello)
 
+## Check information in Web Interface
+
+Check [build](https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/console/project/myproject/browse/builds/hello/hello-1?tab=details) and well  [imagestream](https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/console/project/myproject/browse/images/hello)
+
 Let's continue and start newly create image

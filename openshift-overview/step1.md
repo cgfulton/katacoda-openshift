@@ -1,6 +1,6 @@
 ## Logging in to the Cluster
 
-To start you need to login/
+To start you need to login.
 
 To login to the OpenShift cluster from the _Terminal_ run:
 
@@ -28,4 +28,4 @@ to change to the project from the command line run the command:
 
 ``oc project myproject``{{execute}}
 
-Please check out you project in Dashboard and get yourself familar with UI. 
+Please check out you project in Dashboard and get yourself familiar with [UI](https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/console/project/myproject/overview)

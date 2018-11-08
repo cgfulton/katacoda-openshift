@@ -62,7 +62,7 @@ route "hello" exposed
 
 ### Access from external world
 
-To test you applicaiton you can run command
-``curl -s http://hello-myproject.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/``{{execute}}
+Simply follow http://hello-myproject.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
-Or simply follow http://hello-myproject.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+If you prefer to stay in terminal run command
+``curl -s http://hello-myproject.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/``{{execute}}
