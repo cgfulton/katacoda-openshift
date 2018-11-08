@@ -62,7 +62,7 @@ route "hello" exposed
 
 ### Access from external world
 
-Simply follow http://hello-myproject.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+Simply follow http://hello-myproject.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/etc/os-release
 
 If you prefer to stay in terminal run command
-``curl -s http://hello-myproject.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/``{{execute}}
+``curl -s http://hello-myproject.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/etc/os-release``{{execute}}
