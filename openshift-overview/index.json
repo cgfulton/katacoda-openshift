@@ -1,20 +1,26 @@
 {
-  "title": "Openshift introduction",
-  "description": "First step in openshift",
-  "time": "30 minutes",
+  "title": "OpenShift overview",
+  "description": "",
+  "time": "60 minutes",
   "details": {
     "steps": [
       {
-        "title": "Logging to  Openshift",
-        "text": "step1.md"
+        "title": "Logging to cluster",
+        "text": "step1.md",
+        "verify": "step1-verify.sh"
       },
       {
-        "title": "Setup build configuration",
-        "text": "step2.md"
+        "title": "Build",
+        "text": "step2.md",
+        "verify": "step2-verify.sh"
       },
       {
-        "title": "Setup hello world application",
+        "title": "Deploy",
         "text": "step3.md"
+      },
+      {
+        "title": "Labels",
+        "text": "step4.md"
       }
     ],
     "intro": {
@@ -27,8 +33,11 @@
   },
   "environment": { 
     "showdashboard": true,
-    "dashboard": "Dashboard",
-    "uilayout": "terminal-iframe"
+    "dashboards": [   {
+      "name": "OpenShift Console",
+      "port": 8443
+    }],
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "openshift",

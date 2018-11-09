@@ -31,9 +31,9 @@ Output:
 
 OpenShift create deploymentconfig and service
 
-**DeploymentConfig** is recipe what ypu want to run and how, in simplistic example it will default all values.
+**DeploymentConfig** is recipe what you want to run and how, in simplistic example it will default all values.
 It will run one instance of your application hello using image **hello** that you build in previous step. 
-DeploymentConfig makes OpenShift to create Pod.
+DeploymentConfig makes OpenShift to create ReplicationController, which in turn creates Pod.
 
 **Service** represent collection of Pods of specific application (hello in your case).
 Service can be used to communicate inside of cluster.
@@ -66,3 +66,24 @@ Simply follow http://hello-myproject.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].env
 
 If you prefer to stay in terminal run command
 ``curl -s http://hello-myproject.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/etc/os-release``{{execute}}
+
+### Check logs
+
+To check logs you need to know name of your pods
+
+``oc get pod --show-all=false``{{execute}}
+
+`--show-all=false` will not show completed pods 
+
+Output:
+```
+NAME            READY     STATUS    RESTARTS   AGE
+hello-1-nk58l   1/1       Running   0          25s
+```
+
+``oc log hello-1-nk58l``
+
+Output:
+```
+172.20.0.1 - - [09/Nov/2018 17:32:07] "GET /etc/os-release HTTP/1.1" 200 -
+```

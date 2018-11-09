@@ -1,5 +1,4 @@
 
-
 ## What is OpenShift 
 
 Red Hat OpenShift is solution build on top of Docker, Kubernetes to manage build and deployment of application on cluster of servers.

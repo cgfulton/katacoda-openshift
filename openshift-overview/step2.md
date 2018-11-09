@@ -1,5 +1,5 @@
 OpenShift allow to build application in cluster.
-You will create now simple build that will use docker to create simple server.
+You will create build that use docker to create simple server.
 
 ```
 FROM centos:7
@@ -7,7 +7,7 @@ EXPOSE 8080
 ENTRYPOINT ["python","-m","SimpleHTTPServer","8080"]
 ```
 
-Above you see Dockerfile content that instruct docker to create new image based on centos:7.
+Above Dockerfile instructs docker to create new image based on centos:7.
 Later it says to expose port 8080 and run simple server using python.
 
 # Create build config
@@ -38,16 +38,15 @@ After you run command you should see output like
 
 This command creates imagestreams and buildconfig.
 
-**ImageSteam** is something that represent image collection, but enrich by notification capabilities, so when you image change build or deployment can refresh
+**ImageSteam** represents image collection
 
-**BuildConfig* is recipe that describe how to build application into a container image.
+**BuildConfig** is recipe that describe how to build application into a container image.
 
-Above we described it using Dockerfile.
-
+In this case you are using Dockerfile.
 
 ## Check build logs
 
-Let's check logs of newly created build config
+Let's check logs of newly created build 
 
 ``oc logs -f bc/hello``{{execute}}
 
@@ -89,4 +88,4 @@ Above you can see build is completed and pushed to ImageStream (calculate from n
 
 Check [build](https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/console/project/myproject/browse/builds/hello/hello-1?tab=details) and well  [imagestream](https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/console/project/myproject/browse/images/hello)
 
-Let's continue and start newly create image
+Let's continue and run newly create image
