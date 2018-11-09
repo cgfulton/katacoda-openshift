@@ -1,1 +1,1 @@
-ssh root@host0 "oc > /root/check"
+ssh root@host01 `oc > /root/check`
