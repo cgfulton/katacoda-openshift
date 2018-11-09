@@ -1,1 +1,1 @@
-[ $(ssh root@host01 "oc project -q") == "myproject" ] && echo "done"
+[ $(ssh root@host0 "oc project -q") == "myproject" ] && echo "done"
