@@ -1,1 +1,1 @@
-ssh root@host01 `oc > /root/check`
+[ $(oc project -q) == "myproject" ] && echo "done"
