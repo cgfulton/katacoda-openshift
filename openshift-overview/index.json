@@ -37,7 +37,7 @@
       "name": "OpenShift Console",
       "port": 8443
     }],
-    "uilayout": "terminal"
+    "uilayout": "terminal-iframe"
   },
   "backend": {
     "imageid": "openshift",
