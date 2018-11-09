@@ -31,7 +31,8 @@
       "text": "finish.md"
     }
   },
-  "environment": { 
+  "environment": {
+    "icon": "fa-openshift",
     "showdashboard": true,
     "dashboards": [   {
       "name": "OpenShift Console",
