@@ -29,13 +29,12 @@ Output:
     Run 'oc status' to view your app.
 ```
 
-OpenShift create deploymentconfig and service
-
-**DeploymentConfig** is recipe what you want to run and how, in simplistic example it will default all values.
+OpenShift creates deploymentconfig and service
+* **DeploymentConfig** is recipe what you want to run and how, in simplistic example it will default all values.
 It will run one instance of your application hello using image **hello** that you build in previous step. 
-DeploymentConfig makes OpenShift to create ReplicationController, which in turn creates Pod.
-
-**Service** represent collection of Pods of specific application (hello in your case).
+DeploymentConfig makes OpenShift to create **ReplicationController**.
+* **ReplicationController** ensures that a specified number of **Pod** replicas/instances are running at any one time
+* **Service** represent collection of **Pods** of specific application (hello in your case).
 Service can be used to communicate inside of cluster.
 
 Go back to your Dashboard and get familiar with UI.
@@ -87,3 +86,11 @@ Output:
 ```
 172.20.0.1 - - [09/Nov/2018 17:32:07] "GET /etc/os-release HTTP/1.1" 200 -
 ```
+
+## Check information in Web Interface
+
+Use interface to see details 
+* [deployment config](https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/console/project/myproject/browse/dc/hello?tab=history), History tab shows list of replication controller, check out Configuration tab it describes your recipe 
+* [replication controller](https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/console/project/myproject/browse/rc/hello-1?tab=details) look at Pod table that shows **Pods** under control of replication controller
+* [service](https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/console/project/myproject/browse/services/hello?tab=details) search for Pod that are "under" this service
+* [route](https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/console/project/myproject/browse/routes/hello) search for Service used to load balance external traffic

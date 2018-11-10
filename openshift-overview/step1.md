@@ -27,4 +27,6 @@ to change to the project from the command line run the command:
 
 ``oc project myproject``{{execute}}
 
+## Check information in Web Interface
+
 Please check out project in [OpenShift Console](https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/console/project/myproject/overview) and get yourself familiar with user interface.

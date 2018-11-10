@@ -1,3 +1,5 @@
+## Create build config
+
 OpenShift allow to build application in cluster.
 You will create build that use docker to create simple server.
 
@@ -6,11 +8,10 @@ FROM centos:7
 EXPOSE 8080
 ENTRYPOINT ["python","-m","SimpleHTTPServer","8080"]
 ```
-
 Above Dockerfile instructs docker to create new image based on centos:7.
 Later it says to expose port 8080 and run simple server using python.
 
-# Create build config
+
 You can create build using command
 
 ``oc new-build --name=hello --dockerfile=$'FROM centos:7\nEXPOSE 8080\nENTRYPOINT ["python","-m","SimpleHTTPServer","8080"]'``{{execute}}
@@ -37,11 +38,8 @@ After you run command you should see output like
 ```
 
 This command creates imagestreams and buildconfig.
-
-**ImageSteam** represents image collection
-
-**BuildConfig** is recipe that describe how to build application into a container image.
-
+* **ImageSteam** represents image collection, it also generate notification when image has changed, the notification could trigger an action in cluster.
+* **BuildConfig** is recipe that describe how to build application into a container image.
 In this case you are using Dockerfile.
 
 ## Check build logs
@@ -86,6 +84,8 @@ Above you can see build is completed and pushed to ImageStream (calculate from n
 
 ## Check information in Web Interface
 
-Check [build](https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/console/project/myproject/browse/builds/hello/hello-1?tab=details) and well  [imagestream](https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/console/project/myproject/browse/images/hello)
+Use interface to see details of 
+* [build](https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/console/project/myproject/browse/builds/hello/hello-1?tab=details) search for Logs
+* [imagestream](https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/console/project/myproject/browse/images/hello) search for "latest" tag
 
 Let's continue and run newly create image
